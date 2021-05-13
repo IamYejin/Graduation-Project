@@ -496,6 +496,18 @@ body.nav-opened .site-wrapper {
 	border-right:1px solid rgba(0,0,0,0.08);
 	border-top: 1px solid rgba(0,0,0,0.08);
 }
+.main_content {
+	float: left;
+	height: 800px;
+	width: 70%;
+	background-color: #313232;
+}
+.side_content {
+	float: right;
+	height: 500px;
+	width: 30%;
+	background-color: #55acee;
+}
 /* Big cover image on the home page */
 .main-header {
 	position:relative;
@@ -743,7 +755,6 @@ body.nav-opened .nav {
 	display:block;
 	float:left;
 	margin-top: 7px;
-	height: 54px;
 	background:none !important;
 	/* Makes sure there is never a background */
 	border:none !important;
@@ -1592,7 +1603,7 @@ h2.widget-title {
 
 	.tag-head.main-header,.author-head.main-header, .post-head.main-header, .no-cover.post-head.main-header {
 		height:auto;
-    min-height: 40vh;
+    	min-height: 40vh;
 	}
   .post-template .content {
     width: 80%;
