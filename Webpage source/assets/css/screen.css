@@ -485,6 +485,17 @@ body.nav-opened .site-wrapper {
 	border-right:1px solid rgba(0,0,0,0.08);
 	border-top: 1px solid rgba(0,0,0,0.08);
 }
+.content_control {
+	width:85%;
+	margin:0px auto;
+	background:#fff;
+	padding:40px 40px;
+	margin-top:-100px;
+	position:relative;
+	border-left:1px solid rgba(0,0,0,0.08);
+	border-right:1px solid rgba(0,0,0,0.08);
+	border-top: 1px solid rgba(0,0,0,0.08);
+}
 /* Big cover image on the home page */
 .main-header {
 	position:relative;
