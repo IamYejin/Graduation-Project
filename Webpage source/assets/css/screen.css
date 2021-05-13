@@ -486,7 +486,8 @@ body.nav-opened .site-wrapper {
 	border-top: 1px solid rgba(0,0,0,0.08);
 }
 .content_control {
-	width:85%;
+	width:90%;
+	height: 730px;
 	margin:0px auto;
 	background:#fff;
 	padding:40px 40px;
@@ -498,15 +499,26 @@ body.nav-opened .site-wrapper {
 }
 .main_content {
 	float: left;
-	height: 800px;
+	height: auto;
 	width: 70%;
-	background-color: #313232;
 }
 .side_content {
 	float: right;
 	height: 500px;
 	width: 30%;
 	background-color: #55acee;
+}
+.rviz {
+	height: 350px;
+	width: 90%;
+	margin: 0px 20px 20px 20px;
+	background-color: rgb(252, 190, 190);
+}
+.camera {
+	height: 350px;
+	width: 90%;
+	margin: 20px 20px;
+	background-color: rgb(221, 214, 247);
 }
 /* Big cover image on the home page */
 .main-header {
@@ -1610,6 +1622,7 @@ h2.widget-title {
     max-width: 80%;
     padding: 40px 20px;
   }
+
 	.no-cover.author-head.main-header {
 		padding:0;
 	}
@@ -2084,10 +2097,13 @@ div#preloader {
 	}
 }
 @media only screen and (max-width:500px) {
-	.content,.post-template .content,.content,.post-template .content {
+	.content, .post-template .content, .post-template .content_control, .content,.post-template .content {
 		margin-top:-30px;
 	}
 	.post-template .content {
+		padding:20px 0;
+	}
+	.post-template .content_control {
 		padding:20px 0;
 	}
 }
