@@ -487,12 +487,12 @@ body.nav-opened .site-wrapper {
 }
 .content_control {
 	width:90%;
-	height: 700px;
+	height: 740px;
 	margin:0px auto;
 	background:#fff;
 	padding:40px 40px;
 	margin-top:-100px;
-	margin-bottom: 30px;
+	padding-bottom: 30px;
 	position:relative;
 	border-left:1px solid rgba(0,0,0,0.08);
 	border-right:1px solid rgba(0,0,0,0.08);
@@ -505,9 +505,9 @@ body.nav-opened .site-wrapper {
 }
 .side_content {
 	float: right;
-	height: 500px;
+
 	width: 30%;
-	background-color: #55acee;
+	background-color: #e8f0f7;
 }
 .rviz {
 	height: 350px;
@@ -1846,12 +1846,12 @@ h2.widget-title {
 	}
 	.content_control {
 		width:90%;
-		height: 520px;
+		height: 560px;
 		margin:0px auto;
 		background:#fff;
 		padding:40px 0px;
 		margin-top:-100px;
-		margin-bottom: 30px;
+		padding-bottom: 30px;
 		position:relative;
 		border-left:1px solid rgba(0,0,0,0.08);
 		border-right:1px solid rgba(0,0,0,0.08);
@@ -2342,4 +2342,38 @@ div#preloader {
 	line-height:30px;
 	padding:7px 12px;
 	height: 44px;
+}
+.move_btn {
+	background-color: transparent;
+	border: none;
+}
+.align_center {
+	margin: 0px auto;
+}
+.align_center2 {
+	width: 100%;
+	margin: 0px auto;
+	background-color: tomato;
+}
+.btn_container {
+	width: 70%;
+	margin: 0px auto;
+}
+.stop_btn, .right_btn {
+	float: left;
+	width: 20%;
+}
+.left_btn {
+	float: left;
+	width: 20%;
+	margin-left: 20%;
+}
+.side_content h1 {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.explanation_content {
+	margin: 30px auto;
+	width: 85%;
+
 }
