@@ -487,11 +487,12 @@ body.nav-opened .site-wrapper {
 }
 .content_control {
 	width:90%;
-	height: 730px;
+	height: 700px;
 	margin:0px auto;
 	background:#fff;
 	padding:40px 40px;
 	margin-top:-100px;
+	margin-bottom: 30px;
 	position:relative;
 	border-left:1px solid rgba(0,0,0,0.08);
 	border-right:1px solid rgba(0,0,0,0.08);
@@ -1546,9 +1547,9 @@ h2.widget-title {
 		height:100vh;
 		padding:0;
 	}
-  .main-header .inner {
-    margin-top: 0;
-}
+	.main-header .inner {
+		margin-top: 0;
+	}
 	.scroll-down,.home-template .main-header:after {
 		display:none;
 	}
@@ -1617,11 +1618,11 @@ h2.widget-title {
 		height:auto;
     	min-height: 40vh;
 	}
-  .post-template .content {
-    width: 80%;
-    max-width: 80%;
-    padding: 40px 20px;
-  }
+	.post-template .content {
+	width: 80%;
+	max-width: 80%;
+	padding: 40px 20px;
+	}
 
 	.no-cover.author-head.main-header {
 		padding:0;
@@ -1842,6 +1843,44 @@ h2.widget-title {
 	}
 	.read-next .post {
 		width: 100%;
+	}
+	.content_control {
+		width:90%;
+		height: 520px;
+		margin:0px auto;
+		background:#fff;
+		padding:40px 0px;
+		margin-top:-100px;
+		margin-bottom: 30px;
+		position:relative;
+		border-left:1px solid rgba(0,0,0,0.08);
+		border-right:1px solid rgba(0,0,0,0.08);
+		border-top: 1px solid rgba(0,0,0,0.08);
+	}
+	.main_content {
+		height: auto;
+		width: 100%;
+	}
+	.side_content {
+		height: 130px;
+		width: 100%;
+		background-color: #55acee;
+	}
+	.rviz {
+		height: 180px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		background-color: rgb(252, 190, 190);
+	}
+	.camera {
+		height: 180px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		background-color: rgb(221, 214, 247);
 	}
 }
 /* ========================================================================== 13. Animations ========================================================================== */
