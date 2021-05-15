@@ -171,32 +171,33 @@
 
 	// Connecting to ROS
 	// ------------------
-	var ros = new ROSLIB.Ros({
-		url : 'ws://192.168.1.184:9090'
-	});
-	
-	ros.on('connection', function(){
-		console.log('Connected to websocket server.');
-	});
-	
-	ros.on('error', function(error){
-		console.log('Error connecting to websocket server:', error);
-	});
-	
-	ros.on('close', function(){
-		console.log('Connected to websocket server closed.');
-	});
-	
-	// Publishing Topic "to_robot2_cmd"
-	// ------------------
-	var robot_2_Cmd = new ROSLIB.Topic({
-		ros : ros,
-		name : 'to_robot2_cmd',
-		messageType : 'std_msgs/String'
-	});
+	function ros_start(url_address) {
+		var ros = new ROSLIB.Ros({
+		url : url_address
+		});
+		ros.on('connection', function(){
+			console.log('Connected to websocket server.');
+		});
+		
+		ros.on('error', function(error){
+			console.log('Error connecting to websocket server:', error);
+		});
+		
+		ros.on('close', function(){
+			console.log('Connected to websocket server closed.');
+		});
+		
+		// Publishing Topic "to_robot2_cmd"
+		// ------------------
+		var robot_2_Cmd = new ROSLIB.Topic({
+			ros : ros,
+			name : 'to_robot2_cmd',
+			messageType : 'std_msgs/String'
+		});
+		
+	}
 	
 	function forward_2() {
-		alert("123");
 		var cmd = new ROSLIB.Message({
 			data : 'forward'
 		});
@@ -234,8 +235,8 @@
 	}
 
 	function url_btn_clicked() {
-		var url = document.getElementById("input").value;
-		alert("123");
+		var url_address = document.getElementById("url").value;
+		ros_start(url_address);
 	}	
 	</script>
 
