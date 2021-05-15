@@ -487,7 +487,6 @@ body.nav-opened .site-wrapper {
 }
 .content_control {
 	width:90%;
-	height: 700px;
 	margin:0px auto;
 	background:#fff;
 	padding:40px 40px;
@@ -498,16 +497,16 @@ body.nav-opened .site-wrapper {
 	border-top: 1px solid rgba(0,0,0,0.08);
 }
 .main_content {
-	float: left;
+	display: inline-block;
 	height: auto;
-	width: 70%;
+	width: 68%;
 }
 .main_content h2 {
 	font-style:italic;
 	margin-left: 20px;
 }
 .side_content {
-	float: right;
+	display: inline-block;
 	width: 30%;
 	background-color: #e8f0f7;
 }
@@ -1652,6 +1651,20 @@ h2.widget-title {
 		border-top:rgba(0,0,100,0.06) 1px solid;
 		border-left: none;
 	}
+	.btn_image {
+		width: 100%;
+	}
+	.side_content h2 {
+		font-style:italic;
+		font-size: 23px;
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+	.main_content h2 {
+		font-size: 23px;
+		font-style:italic;
+		margin-left: 20px;
+	}
 }
 /* ========================================================================== 12. Media Queries - Smaller than 500px ========================================================================== */
 @media only screen and (max-width:500px) {
@@ -2369,16 +2382,8 @@ div#preloader {
 	width: 70%;
 	margin: 0px auto;
 }
-.stop_btn, .right_btn {
-	float: left;
-	width: 20%;
-}
-.left_btn {
-	float: left;
-	width: 20%;
-	margin-left: 20%;
-}
 .side_content h2 {
+	font-style:italic;
 	margin-left: 20px;
 	margin-top: 20px;
 }
@@ -2386,4 +2391,29 @@ div#preloader {
 	margin: 30px auto;
 	width: 85%;
 
+}
+.left_btn {
+	text-align: right;
+}
+.right_btn {
+	text-align: left;
+}
+.table {
+	display: table;
+	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+}
+.table_row_group {
+	display: table-row-group;
+}
+.tr {
+	display: table-row;
+}
+.th {
+	display: table-cell;
+}
+.btn_image {
+	width: 40%;
 }
