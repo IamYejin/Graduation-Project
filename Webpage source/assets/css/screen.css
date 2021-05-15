@@ -487,12 +487,11 @@ body.nav-opened .site-wrapper {
 }
 .content_control {
 	width:90%;
-	height: 740px;
+	height: 700px;
 	margin:0px auto;
 	background:#fff;
 	padding:40px 40px;
 	margin-top:-100px;
-	padding-bottom: 30px;
 	position:relative;
 	border-left:1px solid rgba(0,0,0,0.08);
 	border-right:1px solid rgba(0,0,0,0.08);
@@ -503,23 +502,34 @@ body.nav-opened .site-wrapper {
 	height: auto;
 	width: 70%;
 }
+.main_content h2 {
+	font-style:italic;
+	margin-left: 20px;
+}
 .side_content {
 	float: right;
-
 	width: 30%;
 	background-color: #e8f0f7;
 }
-.rviz {
-	height: 350px;
+.rviz_div {
 	width: 90%;
 	margin: 0px 20px 20px 20px;
 	background-color: rgb(252, 190, 190);
 }
-.camera {
-	height: 350px;
+.rviz {
+	position: relative;
+	padding-top: 56.25%;
+	overflow: hidden;
+}
+.camera_div {
 	width: 90%;
-	margin: 20px 20px;
+	margin: 20px auto;
 	background-color: rgb(221, 214, 247);
+}
+.camera {
+	position: relative;
+	padding-top: 56.25%;
+	overflow: hidden;
 }
 /* Big cover image on the home page */
 .main-header {
@@ -1437,7 +1447,7 @@ h2.widget-title {
 	min-width: 25px;
 }
 /* Pastebin */
-.content .embedPastebin {
+.content .embedPastebin, .content_control .embedPastebin {
 	margin-bottom: 1.75em;
 }
 /* ========================================================================== 9. Pagination - Tools to let you flick between pages ========================================================================== */
@@ -1846,12 +1856,10 @@ h2.widget-title {
 	}
 	.content_control {
 		width:90%;
-		height: 560px;
 		margin:0px auto;
 		background:#fff;
 		padding:40px 0px;
 		margin-top:-100px;
-		padding-bottom: 30px;
 		position:relative;
 		border-left:1px solid rgba(0,0,0,0.08);
 		border-right:1px solid rgba(0,0,0,0.08);
@@ -1862,25 +1870,27 @@ h2.widget-title {
 		width: 100%;
 	}
 	.side_content {
-		height: 130px;
 		width: 100%;
-		background-color: #55acee;
+		background-color: #e8f0f7;
 	}
-	.rviz {
-		height: 180px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 10px;
+	.rviz_div {
+		margin: 10px auto;
 		background-color: rgb(252, 190, 190);
 	}
-	.camera {
-		height: 180px;
+	.rviz {
+		position: relative;
+		padding-top: 56.25%;
+		overflow: hidden;
+	}
+	.camera_div {
 		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 10px;
+		margin: 20px auto;
 		background-color: rgb(221, 214, 247);
+	}
+	.camera {
+		position: relative;
+		padding-top: 56.25%;
+		overflow: hidden;
 	}
 }
 /* ========================================================================== 13. Animations ========================================================================== */
@@ -2368,7 +2378,7 @@ div#preloader {
 	width: 20%;
 	margin-left: 20%;
 }
-.side_content h1 {
+.side_content h2 {
 	margin-left: 20px;
 	margin-top: 20px;
 }
