@@ -504,11 +504,12 @@ body.nav-opened .site-wrapper {
 .main_content h2 {
 	font-style:italic;
 	margin-left: 20px;
+	color: #333;
 }
 .side_content {
 	display: inline-block;
 	width: 30%;
-	background-color: #e8f0f7;
+	background-color: #e0e0e0a4;
 }
 .rviz_div {
 	width: 90%;
@@ -1655,6 +1656,7 @@ h2.widget-title {
 	}
 	.side_content h2 {
 		font-style:italic;
+		color: #333;
 		font-size: 23px;
 		margin-left: 20px;
 		margin-top: 20px;
@@ -1662,6 +1664,7 @@ h2.widget-title {
 	.main_content h2 {
 		font-size: 23px;
 		font-style:italic;
+		color: #333;
 		margin-left: 20px;
 	}
 	.url_text h4 {
@@ -2385,6 +2388,7 @@ div#preloader {
 }
 .side_content h2 {
 	font-style:italic;
+	color: #333;
 	margin-left: 20px;
 	margin-top: 20px;
 }
@@ -2420,6 +2424,7 @@ div#preloader {
 }
 .url_text h4{
 	font-style:italic;
+	color: #333;
 }
 .url_text {
 	margin-left: 30px;
