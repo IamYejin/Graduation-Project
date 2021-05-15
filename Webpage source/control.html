@@ -36,60 +36,69 @@
 	</div>
 	</header>
 	<main id="content" class="content_control" role="main">
-	<div>
-	<div class="main_content">
-		<h2>Slam</h2>
-		<div class="rviz_div">
-			<div class="rviz">
-				<content style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: green;"></content>
+		<div class="input_rosUrl">
+			<div class="url_text">
+				<h4>roslib connection url: </h4>
 			</div>
+			<div class="input_url">
+				<input type="text" name="url" value="ws://192.168.1.184:9090">
+			</div>
+			<button class="url_button">Enter</button>
+			
 		</div>
-	</div>
-	<div class="side_content">
-		<div>
-			<h2>Control</h2>
-		</div>
-		<div class="btn_container">
-			<div class="table">
-				<div class="table_row_group">
-					<div class="tr">
-						<div class="th"></div>
-						<div class="th">
-							<button class="align_center move_btn" onclick="forward_2()"><img src="assets/img/go.png" class="btn_image"></button>
-						</div>
-						<div class="th"></div>
-					</div>
-					<div class="tr">
-						<div class="th">	
-							<button class="left_btn move_btn" onclick="left_2()"><img src="assets/img/left.png" class="btn_image"></button>
-						</div>
-						<div class="th">
-							<button class="move_btn" onclick="stop_2()"><img src="assets/img/stop.png" class="btn_image"></button>
-						</div>
-						<div class="th">
-							<button class="right_btn move_btn" onclick="right_2()"><img src="assets/img/right.png" class="btn_image"></button>
-						</div>
-					</div>
-					<div class="tr">
-						<div class="th"></div>
-						<div class="th">
-							<button class="move_btn" onclick="back_2()"><img src="assets/img/back.png" class="btn_image"></button>
-						</div>
-						<div class="th"></div>
-					</div>
+
+		<div class="main_content">
+			<h2>Slam</h2>
+			<div class="rviz_div">
+				<div class="rviz">
+					<content style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: green;"></content>
 				</div>
 			</div>
 		</div>
-		
-		<h2>Camera</h2>
-		<div class="camera_div">
-			<div class="camera">
-
+		<div class="side_content">
+			<div>
+				<h2>Control</h2>
+			</div>
+			<div class="btn_container">
+				<div class="table">
+					<div class="table_row_group">
+						<div class="tr">
+							<div class="th"></div>
+							<div class="th">
+								<button class="align_center move_btn" onclick="forward_2()"><img src="assets/img/go.png" class="btn_image"></button>
+							</div>
+							<div class="th"></div>
+						</div>
+						<div class="tr">
+							<div class="th">	
+								<button class="left_btn move_btn" onclick="left_2()"><img src="assets/img/left.png" class="btn_image"></button>
+							</div>
+							<div class="th">
+								<button class="move_btn" onclick="stop_2()"><img src="assets/img/stop.png" class="btn_image"></button>
+							</div>
+							<div class="th">
+								<button class="right_btn move_btn" onclick="right_2()"><img src="assets/img/right.png" class="btn_image"></button>
+							</div>
+						</div>
+						<div class="tr">
+							<div class="th"></div>
+							<div class="th">
+								<button class="move_btn" onclick="back_2()"><img src="assets/img/back.png" class="btn_image"></button>
+							</div>
+							<div class="th"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 			
+			<h2>Camera</h2>
+			<div class="camera_div">
+				<div class="camera">
+
+				</div>
+				
+			</div>
 		</div>
-	</div>
-	</div>
 	</main>
 
 
@@ -102,6 +111,53 @@
 		</div>
 	</footer>
 </div>
+<style>
+	input[type="text"] {
+		height: auto;
+		width: 300px;
+		height: 35px;
+		font-size: 20px;
+		border-radius: 20px;
+		border: 2px solid #b9b2b2;
+		padding-left: 20px;
+	}
+	input:focus {
+		outline:none;
+	}
+	@media only screen and (max-width:500px) {
+		input[type="text"] {
+		height: auto;
+		width: 250px;
+		height: 35px;
+		font-size: 15px;
+		border-radius: 20px;
+		border: 2px solid #b9b2b2;
+		padding-left: 20px;
+		}
+	}
+	@media only screen and (max-width:900px) {
+		input[type="text"] {
+		height: auto;
+		width: 220px;
+		height: 35px;
+		font-size: 17px;
+		border-radius: 20px;
+		border: 2px solid #b9b2b2;
+		padding-left: 20px;
+		}
+	}
+	@media only screen and (max-width:685px) {
+		input[type="text"] {
+		height: auto;
+		width: 320px;
+		height: 35px;
+		font-size: 17px;
+		border-radius: 20px;
+		border: 2px solid #b9b2b2;
+		padding-left: 30px;
+		}
+	}
+</style>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="assets/js/masonry.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.fitvids.js"></script>
