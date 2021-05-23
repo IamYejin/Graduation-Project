@@ -13,9 +13,9 @@
 <body class="post-template">
 <div class="site-wrapper">
 	<nav class="main-nav overlay clearfix">
-		<a class="blog-logo" href="index.html"><img src="assets/img/page_logo.png" alt="Graduation Project"/></a>
+		<a class="blog-logo" href="../index.html"><img src="assets/img/page_logo.png" alt="Graduation Project"/></a>
 		<ul id="menu">
-		<li role="presentation"><a href="index.html">Home</a></li>
+		<li role="presentation"><a href="../index.html">Home</a></li>
 		<li role="presentation"><a href="introduction.html">Project Introduction</a></li>
 		<li role="presentation"><a href="developer.html">Developer</a></li>
 		<li class="nav-current" role="presentation"><a href="control.html">Robot control</a></li>
@@ -107,7 +107,7 @@
 	<footer class="site-footer clearfix">
 		<a href="#top" id="back-to-top" class="back-top"></a>
 		<div class="text-center">
-			<a href="index.html">ROS Web Interface</a> &copy; 2021
+			<a href="../index.html">ROS Web Interface</a> &copy; 2021
 		</div>
 	</footer>
 </div>
@@ -123,17 +123,6 @@
 	}
 	input:focus {
 		outline:none;
-	}
-	@media only screen and (max-width:500px) {
-		input[type="text"] {
-		height: auto;
-		width: 250px;
-		height: 35px;
-		font-size: 15px;
-		border-radius: 20px;
-		border: 2px solid #b9b2b2;
-		padding-left: 20px;
-		}
 	}
 	@media only screen and (max-width:900px) {
 		input[type="text"] {
@@ -157,6 +146,20 @@
 		padding-left: 30px;
 		}
 	}
+	@media only screen and (max-width:500px) {
+		input[type="text"] {
+		height: auto;
+		width: 180px;
+		height: 35px;
+		font-size: 15px;
+		border-radius: 20px;
+		border: 2px solid #b9b2b2;
+		padding-left: 20px;
+		}
+	}
+
+
+
 </style>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
