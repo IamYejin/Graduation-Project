@@ -38,10 +38,10 @@
 	<main id="content" class="content_control" role="main">
 		<div class="input_rosUrl">
 			<div class="url_text">
-				<h4>roslib connection url: </h4>
+				<h4>Connection url: </h4>
 			</div>
 			<div class="input_url">
-				<input type="text" id="url" value="ws://192.168.1.184:9090">
+				<input type="text" id="url" value="192.168.100.165">
 			</div>
 			<button class="url_button" onclick="url_btn_clicked()">Enter</button>
 			
@@ -90,11 +90,11 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<h2>Camera</h2>
 			<div class="camera_div">
 				<div class="camera">
-
+					<img src="assets/img/turtlebot_img.png" id="camera_id" class="camera_img">
 				</div>
 				
 			</div>
@@ -171,7 +171,8 @@
 
 
 <script type="text/javascript">
-
+//http://192.168.100.165:8080/stream?topic=/raspicam_node/image
+var robot_2_Cmd;
 	// Connecting to ROS
 	// ------------------
 	function ros_start(url_address) {
@@ -192,36 +193,42 @@
 		
 		// Publishing Topic "to_robot2_cmd"
 		// ------------------
-		var robot_2_Cmd = new ROSLIB.Topic({
+		robot_2_Cmd = new ROSLIB.Topic({
 			ros : ros,
 			name : 'to_robot2_cmd',
 			messageType : 'std_msgs/String'
 		});
-		
+
 	}
+	
 	
 	function forward_2() {
 		var cmd = new ROSLIB.Message({
 			data : 'forward'
 		});
+		console.log("clicked forward button");
 		robot_2_Cmd.publish(cmd);
 	}
+
 	function back_2() {
 		var cmd = new ROSLIB.Message({
 			data : 'back'
 		});
+		console.log("clicked back button");
 		robot_2_Cmd.publish(cmd);
 	}
 	function left_2() {
 		var cmd = new ROSLIB.Message({
 			data : 'left'
 		});
+		console.log("clicked left button");
 		robot_2_Cmd.publish(cmd);
 	}
 	function right_2() {
 		var cmd = new ROSLIB.Message({
 			data : 'right'
 		});
+		console.log("clicked right button");
 		robot_2_Cmd.publish(cmd);
 	}
 	function home_2() {
@@ -234,12 +241,18 @@
 		var cmd = new ROSLIB.Message({
 			data : 'stop'
 		});
+		console.log("clicked stop button");
 		robot_2_Cmd.publish(cmd);
 	}
 
 	function url_btn_clicked() {
 		var url_address = document.getElementById("url").value;
+		var camera_url = "http://" + url_address + ":8080/stream?topic=/raspicam_node/image";
+		url_address = "ws://" + url_address + ":9090";
 		ros_start(url_address);
+		console.log(url_address);
+		console.log(camera_url);
+		document.getElementById("camera_id").src = camera_url;
 	}	
 	</script>
 

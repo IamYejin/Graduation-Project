@@ -527,8 +527,10 @@ body.nav-opened .site-wrapper {
 }
 .camera {
 	position: relative;
-	padding-top: 56.25%;
 	overflow: hidden;
+}
+.camera_img {
+	background-size: cover;
 }
 /* Big cover image on the home page */
 .main-header {
@@ -1907,7 +1909,6 @@ h2.widget-title {
 	}
 	.camera {
 		position: relative;
-		padding-top: 56.25%;
 		overflow: hidden;
 	}
 }
