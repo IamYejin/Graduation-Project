@@ -498,6 +498,7 @@ body.nav-opened .site-wrapper {
 }
 .main_content {
 	display: inline-block;
+	float: left;
 	height: auto;
 	width: 68%;
 }
@@ -507,6 +508,7 @@ body.nav-opened .site-wrapper {
 	color: #333;
 }
 .side_content {
+	margin-top: 50px;
 	display: inline-block;
 	width: 30%;
 	background-color: #e0e0e0a4;
