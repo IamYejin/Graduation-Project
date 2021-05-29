@@ -2449,3 +2449,17 @@ div#preloader {
 	background-color: black;
 	color: white;
 }
+.move_button {
+	margin-left: 10px;
+	margin-bottom: 5px;
+	display: inline-block;
+	border-radius: 20px;
+	font-size: 18px;
+	padding: 10px 15px;
+	border: 0px;
+	background-color: #b9b2b2;
+}
+.move_button:hover {
+	background-color: black;
+	color: white;
+}

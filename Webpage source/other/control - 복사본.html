@@ -50,7 +50,7 @@
 		<div class="main_content">
 			<h2>Slam</h2>
 			<div class="rviz_div">
-				<div class="rviz" id="rviz">
+				<div class="rviz">
 					<content id="map" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgb(171, 171, 175);"></content>
 				</div>
 			</div>
@@ -90,24 +90,6 @@
 					</div>
 				</div>
 			</div>
-
-			<h2>Destination</h2>
-			<button class="move_button" onclick="go_home()" type="button">
-				Home
-			</button>
-
-			<button class="move_button" onclick="go_A()" type="button">
-				A room
-			</button>
-   
-			<button class="move_button" onclick="go_B()" type="button">
-			   B room
-		   </button>
-   
-		   <button class="move_button" onclick="go_C()" type="button">
-			   C room
-		   </button>
-   
 
 			<h2>Camera</h2>
 			<div class="camera_div">
@@ -196,9 +178,6 @@
 <script type="text/javascript">
 //http://192.168.100.165:8080/stream?topic=/raspicam_node/image
 var robot_2_Cmd;
-var turtlebot_gohome
-var ros
-
 	// Connecting to ROS
 	// ------------------
 	function ros_start(url_address) {
@@ -225,19 +204,11 @@ var ros
 			messageType : 'std_msgs/String'
 		});
 
-		turtlebot_gohome = new ROSLIB.Topic({
-		ros : ros,
-		name : '/gohome',
-		messageType : 'std_msgs/String'
-		});
-		
-		var width_div = document.getElementById("rviz").clientWidth;
-		var height_div = document.getElementById("rviz").clientHeight;
-		// Create the main viewer.
+		    // Create the main viewer.
 		var viewer = new ROS2D.Viewer({
 			divID : 'map',
-			width : width_div,
-			height : height_div
+			width : 400,
+			height : 400
 		});
 
 		// Setup the nav client.
@@ -303,35 +274,6 @@ var ros
 		console.log(camera_url);
 		document.getElementById("camera_id").src = camera_url;
 	}	
-
-	
-	function go_home() {
-        var home = new ROSLIB.Message({
-            data : 'gohome'
-        });
-        turtlebot_gohome.publish(home);
-     }
-
-   function go_A() {
-        var home = new ROSLIB.Message({
-            data : 'goA'
-        });
-        turtlebot_gohome.publish(home);
-     }
-
-   function go_B() {
-        var home = new ROSLIB.Message({
-            data : 'goB'
-        });
-        turtlebot_gohome.publish(home);
-     }
-
-   function go_C() {
-        var home = new ROSLIB.Message({
-            data : 'goC'
-        });
-        turtlebot_gohome.publish(home);
-     }
 	</script>
 
 </body>
