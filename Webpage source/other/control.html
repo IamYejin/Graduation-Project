@@ -231,6 +231,24 @@ var ros
 		messageType : 'std_msgs/String'
 		});
 		
+		turtlebot_goA = new ROSLIB.Topic({
+		ros : ros,
+		name : '/goA',
+		messageType : 'std_msgs/String'
+		});
+
+		turtlebot_goB = new ROSLIB.Topic({
+		ros : ros,
+		name : '/goB',
+		messageType : 'std_msgs/String'
+		});
+
+		turtlebot_goC = new ROSLIB.Topic({
+		ros : ros,
+		name : '/goC',
+		messageType : 'std_msgs/String'
+		});
+
 		var width_div = document.getElementById("rviz").clientWidth;
 		var height_div = document.getElementById("rviz").clientHeight;
 		// Create the main viewer.
@@ -313,24 +331,24 @@ var ros
      }
 
    function go_A() {
-        var home = new ROSLIB.Message({
+        var A = new ROSLIB.Message({
             data : 'goA'
         });
-        turtlebot_gohome.publish(home);
+        turtlebot_goA.publish(A);
      }
 
    function go_B() {
-        var home = new ROSLIB.Message({
+        var B = new ROSLIB.Message({
             data : 'goB'
         });
-        turtlebot_gohome.publish(home);
+        turtlebot_goB.publish(B);
      }
 
    function go_C() {
-        var home = new ROSLIB.Message({
+        var C = new ROSLIB.Message({
             data : 'goC'
         });
-        turtlebot_gohome.publish(home);
+        turtlebot_goC.publish(C);
      }
 	</script>
 
