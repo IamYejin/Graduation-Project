@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
+
+<script type="text/javascript" src="http://static.robotwebtools.org/EaselJS/current/easeljs.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/ros2djs/current/ros2d.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/nav2djs/current/nav2d.min.js"></script>
+
+<script type="text/javascript" src="http://static.robotwebtools.org/keyboardteleopjs/current/keyboardteleop.min.js"></script>
+
+<script type="text/javascript">
+
+  var ros = new ROSLIB.Ros({
+      url : 'ws://192.168.100.165:9090'
+    });
+
+  var turtlebot_gohome = new ROSLIB.Topic({
+      ros : ros,
+      name : '/gohome',
+      messageType : 'std_msgs/String'
+    });
+
+  function init() {
+    // Connect to ROS.
+    var ros = new ROSLIB.Ros({
+      url : 'ws://192.168.100.165:9090' // Remote pc IP
+    });
+
+    // Create the main viewer.
+    var viewer = new ROS2D.Viewer({
+      divID : 'nav',
+      width : 400,
+      height : 400
+    });
+
+    // Setup the nav client.
+    var nav = NAV2D.OccupancyGridClientNav({
+      ros : ros,
+      rootObject : viewer.scene,
+      viewer : viewer,
+      serverName : '/move_base'
+    });
+  }
+  
+  function go_home() {
+        var home = new ROSLIB.Message({
+            data : 'gohome'
+        });
+        turtlebot_gohome.publish(home);
+  }
+</script>
+</head>
+
+<body onload="init()">
+  <div class="title">
+  <h2>Simple Navigation Example</h2>
+  <h2>Image Video Output</h2>
+  </div>
+  <div id="nav"><img src="http://192.168.100.165:8080/stream?topic=/raspicam_node/image" weight="600" height="400"></div> 
+  <button onclick="go_home()">go home</button>
+</body>
+</html>
