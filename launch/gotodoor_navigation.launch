@@ -1,0 +1,11 @@
+<launch>
+     <!-- button control -->
+     <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+     <node pkg="grad_project" type="robot2_listener.py" name="robot2_listen"/>
+
+     <!-- video control -->
+     <node name="gotohome" pkg="grad_project" type="gotohome.py"/>
+     <node name="gotoA" pkg="grad_project" type="gotoB.py"/>
+     <node name="gotoB" pkg="grad_project" type="gotoB.py"/>
+     <node name="gotoC" pkg="grad_project" type="gotoC.py"/>
+</launch>
